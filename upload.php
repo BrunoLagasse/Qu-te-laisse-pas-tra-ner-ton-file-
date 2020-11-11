@@ -16,7 +16,7 @@ if (!empty($_FILES['files']['name'][0])){
 
     $uploaded = array();
     $failed = array();
-    // 1- Vérification de l'extension
+
 
     $allowed = array('jpg', 'png', 'gif');
 
@@ -27,7 +27,7 @@ if (!empty($_FILES['files']['name'][0])){
 
         $file_ext = explode('.', $file_name);
         $file_ext = strtolower(end($file_ext));
-        // Vérification de l'extension
+
         if(in_array($file_ext, $allowed)){
 
             if($file_error === 0){
@@ -62,12 +62,8 @@ if (!empty($_FILES['files']['name'][0])){
     elseif(!empty($failed)){
         print_r($failed);
         echo
-            "<h2 class='text-center'>Dommage ça ne fonctionne pas !</h2>".
-            "</br>".
-            "<img src='https://media.giphy.com/media/2ychkCG62XO4U/giphy.gif' class='col-md-4 col-md-offset-4'>".
-            "</br>".
-            "</br>".
-            "<a href='index.php' class='btn btn-primary'> Accueil </a>";
+            "<h2 class='text-center'>Nope !</h2>".
+            "<a href='index.php' class='btn btn-primary'> Retour en arrière </a>";
     }
 
 

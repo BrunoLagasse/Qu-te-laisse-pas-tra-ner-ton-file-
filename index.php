@@ -5,19 +5,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Compiled and minified CSS -->
-    <title> Multi Uploader </title>
-    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+    <title> upload Multiple </title>
 </head>
 <body>
-<h1 class="text-center"> Multi Uploader </h1>
+<h1 class="text-center"> Upload Multiple </h1>
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <form action="upload.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend> Ajoutez vos fichiers </legend>
                 <div class="form-group">
-                    <label for="file" class="maximal" >Taille maximale du fichier 1Mo</label>
+                    <label for="file" class="maximal" >Taille max du fichier: 1Mo</label>
                     <input type="hidden" name="MAX_FILE_SIZE" value="1000000"/>
                     <input type="file" class="file" name="files[]" id="file" multiple/>
                 </div>
